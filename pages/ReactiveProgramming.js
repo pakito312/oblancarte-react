@@ -507,8 +507,7 @@ const ReactiveProgramming = (props) => {
                 <img src="/patterns/waves-4.svg" className="absolute bottom-0 top-0" />
                 <div className="layout">
                     <hgroup>
-                        <h2 className="text-xl md:text-3xl lg:text-5xl mb-8 text-gray-900 text-center font-semibold">Nuestros lectores dicen</h2>
-                        <h3 className="text-sm md:text-md lg:text-xl mb-8 text-gray-900 text-center">Algunas de las personas que han tenido la oportunidad de leer mis libros.</h3>
+                        <h2 className="text-xl md:text-3xl lg:text-5xl mb-8 text-gray-900 text-center font-semibold">Lo que la gente dice</h2>
                     </hgroup>
                 </div>
 
