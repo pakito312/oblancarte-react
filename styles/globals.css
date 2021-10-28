@@ -291,5 +291,11 @@
     .pb-10 {
       padding-bottom: 10rem !important;
   }
+  .floue{
+    height: 220px;
+    background: linear-gradient(180deg,hsla(0,0%,100%,0) 0,#93B1D6 100%);
+    position: relative;
+    margin-top: -220px;
+}
   
 }

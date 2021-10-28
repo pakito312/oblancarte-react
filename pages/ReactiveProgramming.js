@@ -1,6 +1,7 @@
 import React from 'react'
+
 import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/solid'
-import { BookmarkAltIcon, ChevronLeftIcon,ChevronRightIcon, PlayIcon,CurrencyDollarIcon } from '@heroicons/react/outline'
+import { BookmarkAltIcon, ChevronLeftIcon,ChevronRightIcon, PlayIcon,CurrencyDollarIcon,ChevronDownIcon,ExternalLinkIcon } from '@heroicons/react/outline'
 import Navbar from '../components/Navbar'
 import BookVerticalCard from '../components/BookVerticalCard'
 import CourseCard from '../components/CourseCard'
@@ -26,6 +27,9 @@ const ReactiveProgramming = (props) => {
                 {customers()}
                 {video()}
                 {summary()}
+                {shortDesc()}
+                {Hero2()}
+                {product()}
                 <AboutMe onClick={e => goto("talk")} />
                 {books()}
                 {cursos()}
@@ -192,8 +196,123 @@ const ReactiveProgramming = (props) => {
 
         )
     }
+    
+    const shortDesc = () => {
+        return (
+           
+            <div id="i" className="overflow-hidden">
+            <section>
+                <div className="layout  max-w-3xl  ">
+                    <div className="z-10">
+                    <h2 className="text-xl text-center  mb-3 text-gray-900 pb-3">Acerca del libro</h2>
+                    <p className="text-center pb-8">Esta es una breve descripción del libro</p>
+                </div>
+                <article className="shadow-gray rounded-lg overflow-hidden bg-white">
+                        <div className="flex flex-col">
+                            <div className="p-4 ">
+                                <p className=" font-semibold lg:text-xl mb-4">Una breve reseña por parte del autor</p>
+                                <p className="pb-3">Hoy en día aprender patrones de diseño no es una cualidad más, si no una obligación. Y es que estudiar y comprender los patrones de diseño nos convierte en un mejor programador/arquitecto y es clave para conseguir una mejor posición en el mundo laboral.</p>
+                                <p className="pb-3">Hoy en día aprender patrones de diseño no es una cualidad más, si no una obligación. Y es que estudiar y comprender los patrones de diseño nos convierte en un mejor programador/arquitecto y es clave para conseguir una mejor posición en el mundo laboral.</p>
+                                <p>Tengo que aceptar que este no es un libro convencional de patrones de diseño debido, principalmente, a que no sigue la misma estructura de las primordiales obras relacionadas con este tema.<span className="opacity-25">  En su lugar, me quise enfocar en ofrecer una perspectiva del mundo real ,en donde el lector pueda aprender a utilizar los patrones de diseño en entornos reales y que puedan ser aplicados a proyectos reales.</span></p>
+                               
+                                    <a className=" text-green  block lg:text-xl  text-center pt-16" >ver la reseña completa <ChevronDownIcon className="-ml-1 h-5 w-5 inline-block ml-2" /></a>
+                               
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
 
 
+        )
+    }
+    const Hero2 = () => {
+        return (
+            <div id="i" className="bg-dark-blue pb-10">
+                <div className="layout  md:pt-16 w-1/2">
+                    <div className="z-10">
+                        <h2 className="text-xl text-center  mb-3 text-white-900 text-white pb-3">Índice del libro</h2>
+                        <p className="text-center text-white  pb-8">El libro cuenta con más de ___ páginas dividido en 3 secciones.</p>
+                    </div>
+                    <article className="shadow-gray rounded-lg overflow-hidden bg-gray-900">
+                        <div className="flex flex-col">
+                            <div className="p-4 ">
+                            <div class="text-center ">
+                            <div class="inline-block  mx-4">
+                                <div className="text-green pb-8"><span className="bg-gray-800 border-2 border-green-500 px-1 rounded-full">1</span> Patrones Creacionales</div>
+                                <p className="text-gray-300">Patrón Factory Method</p>
+                                <p className="text-gray-300">Patrón Abstract Factory</p>
+                                <p className="opacity-25 text-white">Patrón Singleton</p>
+                            </div>
+                            <div class="inline-block text-white pull-right">
+                                <div className="text-green pb-8"><span className="bg-gray-800 border-2 border-green-500 px-1 rounded-full">3</span>Patrones Creacionales</div>
+                                <p className="text-gray-300">Patrón Iterator</p>
+                                <p className="text-gray-300">Patrón Command</p>
+                                <p className="opacity-25 text-white">Patrón Observer</p>
+                            </div>
+
+                            </div>
+                                 <a className=" text-green  block lg:text-xl  text-center pt-16" >Ver índice completo <ChevronDownIcon className="-ml-1 h-5 w-5 inline-block ml-2" /></a>
+                               
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div className="layout pt-6 w-1/2">
+                    <div class="p-6 bg-gray-900 rounded-xl shadow-md flex items-center ">
+                    <button href="#" onClick={e => goto("talk")} className="btn btn-white-light text-orange round block md:inline-block text-center mt-10 " >La oferta finaliza en:<br />6d 8h 40m 🔥</button>
+                        <div className="mx-auto">
+                            <p class="text-gray-300 text-white">$50.00 USD</p>
+                            <div class="text-xl font-medium text-green-300">$50.00 USD</div>
+                        </div>
+                        <button href="#" onClick={e => goto("talk")} className="btn  btn-green-light shadow-green round block md:inline-block text-center mt-10" >Comprar libro <ArrowRightIcon className="h-5 w-5 inline-block ml-2" /></button>
+                    </div>
+
+                </div>
+            </div>
+        )
+    }
+    const product = () => {
+        return (
+           
+            <div  className="overflow-hidden">
+                <section>
+                    <div class="p-6  mx-auto bg-white flex items-center layout">
+                       
+                        <div className="max-w-md">
+                            <h3 class="text-xl font-medium  pb-3">Singleton</h3>
+                            <p class="pb-8">Gestiona la configuración global de tu aplicación media un objeto único 
+                            implementado con el patrón Singleton, dicho objeto podrá ser compartido y modificado por todos los módulos.</p>
+                            <a className="link-purple font-medium text-green">Leer más <ExternalLinkIcon className="-ml-1 h-5 w-5 inline-block ml-2"/></a>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img class="h-1/2" src="/oscar/image84.png" alt="ChitChat Logo" />
+                        </div>
+
+                    </div>
+                          
+                </section>
+                <section>
+                    <div class="p-6  mx-auto bg-white flex items-center layout">
+                       
+                        <div className="max-w-md">
+                            <h3 class="text-xl font-medium  pb-3">Abstract Factory</h3>
+                            <p class="pb-8">Aprenderemos a controlar la cantidad de procesos simultáneos, optimizando las recursos del sistema y evitando el colapso por saturación de procesos.</p>
+                            <a className="link-purple font-medium text-green">Leer más <ExternalLinkIcon className="-ml-1 h-5 w-5 inline-block ml-2"/></a>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img class="h-1/2" src="/oscar/image85.png" alt="ChitChat Logo" />
+                        </div>
+
+                    </div>
+                          
+                </section>
+            </div>
+
+
+        )
+    }
     const customers = () => {
         const settings = {
             swipeToSlide: true,
